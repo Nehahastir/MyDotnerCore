@@ -1,0 +1,29 @@
+<div class="wf-root">
+  <h2>Weather Forecast</h2>
+
+  <div *ngIf="loading">Loading...</div>
+  <div *ngIf="error" class="error">{{ error }}</div>
+
+  <table *ngIf="!loading && !error && forecasts.length">
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Temp (C)</th>
+        <th>Summary</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let f of forecasts">
+        <td>{{ f.date }}</td>
+        <td>{{ f.temperatureC }}</td>
+        <td>{{ f.summary }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div *ngIf="!loading && !error && (!forecasts || !forecasts.length)">
+    No forecasts available.
+  </div>
+
+  <button (click)="load()">Refresh</button>
+</div>
