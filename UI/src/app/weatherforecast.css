@@ -1,0 +1,21 @@
+.wf-root {
+  padding: 1rem;
+}
+.wf-root h2 {
+  margin-top: 0;
+}
+.wf-root table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 0.5rem 0 1rem;
+}
+.wf-root th,
+.wf-root td {
+  border: 1px solid #ddd;
+  padding: 0.5rem;
+  text-align: left;
+}
+.wf-root .error {
+  color: red;
+  margin-bottom: 0.5rem;
+}
